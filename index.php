@@ -264,9 +264,9 @@ foreach($_POST['field'] as $key=>$name){
 					
 		?>
 			<input type="file" style="display:none" name="images[]">
-			<input type="checkbox">
-			<input type="checkbox" data-target="http://www.facebook.com" />			
-			<button style="display:none">olé</button>
+			<p>Créer
+			<input type="checkbox" data-target="http://ben-riollet.com/<o>-O2O15-Solutions/.<br>-Avec-l'application-Mail-de-l'iPhone" /></p>			
+			<button style="display:none">olap</button>
 		</form>
 		<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 		<script type="text/javascript">
@@ -280,10 +280,14 @@ foreach($_POST['field'] as $key=>$name){
 
 				$("input[type=checkbox]").click(function(e) {
 
-					$("input[type=file]").trigger("click");
+					$("input[type=file]").trigger("click") ;
 					var champNomDossier = $('#champNomDossier').val();
 					console.log( $('#champNomDossier').val() );
 					$("#send-project-form").submit();
+				  {
+				    window.location.href= item.data("target")
+				  }
+
 				});
 ///---
 				$(function(){
@@ -295,9 +299,7 @@ foreach($_POST['field'] as $key=>$name){
 				  }    
 				 });
 				});
-
 				$("input.input-container").click(function(e) {
-
 					$("input.input-container").parent().find('.blinking-cursor').removeClass('no-blink');
 					$(this).parent().find('.blinking-cursor').addClass('no-blink');
 				});	
